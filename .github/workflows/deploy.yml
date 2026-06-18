@@ -1,0 +1,67 @@
+name: CI/CD Pipeline (Lab 5 KPI)
+
+on:
+  push:
+    branches: [ "main", "dev" ] # Підтримка Git Flow (DEV та MAIN)
+  workflow_dispatch: # Підтримка ручного запуску операцій користувачем
+
+jobs:
+  sast-test:
+    name: Security Testing (SAST)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run SAST Security Scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          ignore-unfixed: true
+          format: 'table'
+          severity: 'HIGH,CRITICAL'
+
+  build-and-push:
+    name: Build & Push to Registry
+    needs: sast-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Login to Docker Hub Registry
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and Push Backend
+        uses: docker/build-push-action@v5
+        with:
+          context: ./communication-control
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/communication-control:latest
+
+      - name: Build and Push Frontend
+        uses: docker/build-push-action@v5
+        with:
+          context: ./map-client
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/map-client:latest
+
+  deploy:
+    name: CD Deployment to Azure VPS
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' 
+    steps:
+      - name: Deploy to Azure Server via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: baldmlab
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            cd ~/lab4
+            sudo docker-compose pull
+            sudo docker-compose up -d
