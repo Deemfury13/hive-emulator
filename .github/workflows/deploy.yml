@@ -39,6 +39,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./communication-control
+          file: ./communication-control/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/communication-control:latest
 
@@ -46,6 +47,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./map-client
+          file: ./map-client/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/map-client:latest
 
