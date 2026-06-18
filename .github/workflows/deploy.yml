@@ -38,7 +38,7 @@ jobs:
       - name: Build and Push Backend
         uses: docker/build-push-action@v5
         with:
-          context: ./CommunicationControl
+          context: .
           file: ./CommunicationControl/DevOpsProject/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/communication-control:latest
@@ -46,7 +46,7 @@ jobs:
       - name: Build and Push Frontend
         uses: docker/build-push-action@v5
         with:
-          context: ./MapClient
+          context: .
           file: ./MapClient/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/map-client:latest
