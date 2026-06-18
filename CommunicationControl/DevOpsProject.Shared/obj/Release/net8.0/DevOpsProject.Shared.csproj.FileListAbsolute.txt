@@ -1,0 +1,11 @@
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.Shared\bin\Release\net8.0\DevOpsProject.Shared.deps.json
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.Shared\bin\Release\net8.0\DevOpsProject.Shared.dll
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.Shared\bin\Release\net8.0\DevOpsProject.Shared.pdb
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.Shared\obj\Release\net8.0\DevOpsProject.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.Shared\obj\Release\net8.0\DevOpsProject.Shared.AssemblyInfoInputs.cache
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.Shared\obj\Release\net8.0\DevOpsProject.Shared.AssemblyInfo.cs
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.Shared\obj\Release\net8.0\DevOpsProject.Shared.csproj.CoreCompileInputs.cache
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.Shared\obj\Release\net8.0\DevOpsProject.Shared.dll
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.Shared\obj\Release\net8.0\refint\DevOpsProject.Shared.dll
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.Shared\obj\Release\net8.0\DevOpsProject.Shared.pdb
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.Shared\obj\Release\net8.0\ref\DevOpsProject.Shared.dll

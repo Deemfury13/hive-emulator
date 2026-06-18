@@ -1,0 +1,15 @@
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\bin\Release\net8.0\DevOpsProject.CommunicationControl.Logic.deps.json
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\bin\Release\net8.0\DevOpsProject.CommunicationControl.Logic.dll
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\bin\Release\net8.0\DevOpsProject.CommunicationControl.Logic.pdb
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\bin\Release\net8.0\DevOpsProject.Shared.dll
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\bin\Release\net8.0\DevOpsProject.Shared.pdb
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\obj\Release\net8.0\DevOpsProject.CommunicationControl.Logic.csproj.AssemblyReference.cache
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\obj\Release\net8.0\DevOpsProject.CommunicationControl.Logic.GeneratedMSBuildEditorConfig.editorconfig
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\obj\Release\net8.0\DevOpsProject.CommunicationControl.Logic.AssemblyInfoInputs.cache
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\obj\Release\net8.0\DevOpsProject.CommunicationControl.Logic.AssemblyInfo.cs
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\obj\Release\net8.0\DevOpsProject.CommunicationControl.Logic.csproj.CoreCompileInputs.cache
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\obj\Release\net8.0\DevOpsPr.3654C4FE.Up2Date
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\obj\Release\net8.0\DevOpsProject.CommunicationControl.Logic.dll
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\obj\Release\net8.0\refint\DevOpsProject.CommunicationControl.Logic.dll
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\obj\Release\net8.0\DevOpsProject.CommunicationControl.Logic.pdb
+D:\hiveemulator-main\hiveemulator-main\src\CommunicationControl\DevOpsProject.CommunicationControl.Logic\obj\Release\net8.0\ref\DevOpsProject.CommunicationControl.Logic.dll
