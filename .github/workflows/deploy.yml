@@ -65,6 +65,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
             cd ~/lab4
-            echo "${{ secrets.SSH_PASSWORD }}" | sudo -S docker-compose down
+            echo "${{ secrets.SSH_PASSWORD }}" | sudo -S rm -f docker-compose.yaml
+            echo "${{ secrets.SSH_PASSWORD }}" | sudo -S docker-compose down --remove-orphans
             echo "${{ secrets.SSH_PASSWORD }}" | sudo -S docker-compose pull
-            echo "${{ secrets.SSH_PASSWORD }}" | sudo -S docker-compose up -d
+            echo "${{ secrets.SSH_PASSWORD }}" | sudo -S docker-compose up -d --remove-orphans
