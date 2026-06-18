@@ -2,8 +2,8 @@ name: CI/CD Pipeline (Lab 5 KPI)
 
 on:
   push:
-    branches: [ "main", "dev" ] # Підтримка Git Flow (DEV та MAIN)
-  workflow_dispatch: # Підтримка ручного запуску операцій користувачем
+    branches: [ "main", "dev" ]
+  workflow_dispatch:
 
 jobs:
   sast-test:
@@ -39,7 +39,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./**/Dockerfile
+          file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/communication-control:latest
 
@@ -47,7 +47,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./**/Dockerfile
+          file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/map-client:latest
 
