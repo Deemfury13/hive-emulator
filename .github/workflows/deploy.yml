@@ -57,6 +57,18 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Copy docker-compose.yml to Server via SSH
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: baldmlab
+          password: ${{ secrets.SSH_PASSWORD }}
+          source: "docker-compose.yml"
+          target: "~/lab4/"
+
       - name: Deploy to Azure Server via SSH
         uses: appleboy/ssh-action@master
         with:
@@ -67,5 +79,6 @@ jobs:
             cd ~/lab4
             echo "${{ secrets.SSH_PASSWORD }}" | sudo -S rm -f docker-compose.yaml
             echo "${{ secrets.SSH_PASSWORD }}" | sudo -S docker-compose down --remove-orphans
+            echo "${{ secrets.SSH_PASSWORD }}" | sudo -S fuser -k 8082/tcp || true
             echo "${{ secrets.SSH_PASSWORD }}" | sudo -S docker-compose pull
             echo "${{ secrets.SSH_PASSWORD }}" | sudo -S docker-compose up -d --remove-orphans

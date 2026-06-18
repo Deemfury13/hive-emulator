@@ -19,4 +19,7 @@ services:
 
   frontend-service:
     image: deemfury/map-client:latest
-    container_name:
+    container_name: frontend-service
+    ports:
+      - "8082:80"
+    restart: always
