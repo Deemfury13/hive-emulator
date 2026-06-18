@@ -38,16 +38,16 @@ jobs:
       - name: Build and Push Backend
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: ./communication-control/Dockerfile
+          context: ./CommunicationControl
+          file: ./CommunicationControl/DevOpsProject/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/communication-control:latest
 
       - name: Build and Push Frontend
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: ./map-client/Dockerfile
+          context: ./MapClient
+          file: ./MapClient/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/map-client:latest
 
